@@ -2,7 +2,7 @@
 
 pkgname=gmpublisher-forked-bin
 _realname=gmpublisher
-pkgver=v0.1.0
+pkgver=0.1.0
 pkgrel=1
 pkgdesc="Workshop Publishing Utility for Garry's Mod, written in Rust & Svelte and powered by Tauri"
 arch=('x86_64')
@@ -12,9 +12,10 @@ depends=('webkit2gtk-4.1' 'libsoup3' 'hicolor-icon-theme' 'libappindicator-gtk3'
 makedepends=('unzip')
 provides=("${_realname}")
 conflicts=("${_realname}")
-source=("${_realname}_linux64.zip::https://github.com/charles-mills/${_realname}/releases/download/${pkgver}/${_realname}_linux64.zip"
-	"LICENSE::https://raw.githubusercontent.com/charles-mills/${_realname}/${pkgver}/LICENSE"
-	"${_realname}.png::https://raw.githubusercontent.com/charles-mills/${_realname}/${pkgver}/src-tauri/icons/128x128.png")
+options=('!debug' '!strip')
+source=("${_realname}_linux64.zip::https://github.com/charles-mills/${_realname}/releases/download/v${pkgver}/${_realname}_linux64.zip"
+	"LICENSE::https://raw.githubusercontent.com/charles-mills/${_realname}/v${pkgver}/LICENSE"
+	"${_realname}.png::https://raw.githubusercontent.com/charles-mills/${_realname}/v${pkgver}/src-tauri/icons/128x128.png")
 sha256sums=('SKIP'
 	'SKIP'
 	'SKIP')
