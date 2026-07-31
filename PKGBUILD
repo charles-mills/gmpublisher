@@ -2,7 +2,7 @@
 
 pkgname=gmpublisher-forked-bin
 _realname=gmpublisher
-pkgver=0.1.0
+pkgver=v0.1.0
 pkgrel=1
 pkgdesc="Workshop Publishing Utility for Garry's Mod, written in Rust & Svelte and powered by Tauri"
 arch=('x86_64')
@@ -14,7 +14,7 @@ provides=("${_realname}")
 conflicts=("${_realname}")
 source=("${_realname}_linux64.zip::https://github.com/charles-mills/${_realname}/releases/download/${pkgver}/${_realname}_linux64.zip"
 	"LICENSE::https://raw.githubusercontent.com/charles-mills/${_realname}/${pkgver}/LICENSE"
-	"${_realname}.png::https://raw.githubusercontent.com/charkes-mills/${_realname}/${pkgver}/src-tauri/icons/128x128.png")
+	"${_realname}.png::https://raw.githubusercontent.com/charles-mills/${_realname}/${pkgver}/src-tauri/icons/128x128.png")
 sha256sums=('SKIP'
 	'SKIP'
 	'SKIP')
