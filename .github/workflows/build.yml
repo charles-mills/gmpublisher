@@ -10,7 +10,7 @@ env:
 
 jobs:
   build_linux:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -52,7 +52,10 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        files: src-tauri/target/release/gmpublisher_linux64.zip
+        files: |
+          src-tauri/target/release/gmpublisher_linux64.zip
+          src-tauri/target/release/bundle/deb/*.deb
+          src-tauri/target/release/bundle/rpm/*.rpm
         fail_on_unmatched_files: true
 
   build_windows:

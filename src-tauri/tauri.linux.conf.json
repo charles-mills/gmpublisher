@@ -1,0 +1,26 @@
+{
+	"build": {
+		"beforeBundleCommand": "patchelf --set-rpath '$ORIGIN/../lib/gmpublisher:$ORIGIN' src-tauri/target/release/gmpublisher"
+	},
+	"bundle": {
+		"targets": ["deb", "rpm"],
+		"resources": {
+			"lib/steam_api/redistributable_bin/linux64/libsteam_api.so": ""
+		},
+		"linux": {
+			"deb": {
+				"section": "utils",
+				"priority": "optional",
+				"files": {
+					"/usr/share/doc/gmpublisher/LICENSE": "../LICENSE"
+				}
+			},
+			"rpm": {
+				"release": "1",
+				"files": {
+					"/usr/share/licenses/gmpublisher/LICENSE": "../LICENSE"
+				}
+			}
+		}
+	}
+}
