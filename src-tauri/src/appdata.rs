@@ -19,11 +19,11 @@ use serde::{Deserialize, Serialize};
 use steamworks::PublishedFileId;
 
 lazy_static! {
-	static ref USER_DATA_DIR: PathBuf = dirs_next::data_dir()
+	static ref USER_DATA_DIR: PathBuf = dirs::data_dir()
 		.unwrap_or_else(|| std::env::current_exe().unwrap_or_else(|_| std::env::temp_dir()))
 		.join("gmpublisher");
-	static ref APP_SETTINGS_PATH: PathBuf = dirs_next::config_dir()
-		.unwrap_or_else(|| dirs_next::data_dir().unwrap_or_else(|| std::env::current_exe().unwrap_or_else(|_| std::env::temp_dir())))
+	static ref APP_SETTINGS_PATH: PathBuf = dirs::config_dir()
+		.unwrap_or_else(|| dirs::data_dir().unwrap_or_else(|| std::env::current_exe().unwrap_or_else(|_| std::env::temp_dir())))
 		.join("gmpublisher/settings.json");
 	static ref TEMP_DIR: PathBuf = std::env::temp_dir().join("gmpublisher");
 	static ref DOWNLOADS_DIR: Option<PathBuf> = dirs::download_dir();
@@ -420,7 +420,7 @@ pub fn write_tauri_settings() -> Option<()> {
 	use serde_json::Value as JsonValue;
 	use std::io::{BufReader, BufWriter};
 
-	let mut settings_path = dirs_next::config_dir()?;
+	let mut settings_path = dirs::config_dir()?;
 	settings_path.push("gmpublisher");
 
 	fs::create_dir_all(&settings_path).ok()?;
