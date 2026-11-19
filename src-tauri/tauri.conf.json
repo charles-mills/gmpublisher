@@ -30,7 +30,7 @@
 	},
 	"bundle": {
 		"active": true,
-		"targets": ["msi", "app"],
+		"targets": ["msi", "app", "deb", "rpm"],
 		"icon": [
 			"icons/32x32.png",
 			"icons/128x128.png",
@@ -47,7 +47,15 @@
 		"longDescription": "Garrys Mod Workshop Publishing Utility",
 		"linux": {
 			"deb": {
-				"depends": []
+				"depends": [],
+				"files": {
+					"/usr/lib/gmpublisher/libsteam_api.so": "lib/steam_api/redistributable_bin/linux64/libsteam_api.so"
+				}
+			},
+			"rpm": {
+				"files": {
+					"/usr/lib/gmpublisher/libsteam_api.so": "lib/steam_api/redistributable_bin/linux64/libsteam_api.so"
+				}
 			}
 		},
 		"windows": {
