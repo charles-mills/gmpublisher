@@ -18,8 +18,10 @@ The easiest way to install is by downloading gmpublisher from the [releases page
 
 ### Linux
 
-You can usually use the provided ZIP file from the [releases page](https://github.com/WilliamVenner/gmpublisher/releases).
+Download and run the relevant file from the [releases page](https://github.com/WilliamVenner/gmpublisher/releases).
 
+* **Debian, Ubuntu, Mint & derivate** users can install the application via the deb file.
+* **Fedora, OpenSUSE & derivate** users can install the application via the rpm file.
 * **Arch Linux** users can install the application from the AUR via the package [`gmpublisher-bin`](https://aur.archlinux.org/packages/gmpublisher-bin).
 * *Note: Other Linux users may need to install additional dependencies.*
 
@@ -70,12 +72,6 @@ You can usually use the provided ZIP file from the [releases page](https://githu
 
 
 [Want to translate gmpublisher to your language?](https://github.com/WilliamVenner/gmpublisher/tree/master/i18n)
-
-## Requirements
-
-Windows, macOS or Linux
-
-Linux users may need to install additional dependencies.
 
 ## Technical Stuff
 
